@@ -1,4 +1,4 @@
-# Ringleader
+# Servers
 A ~~service~~ server registry of sort. 
 *nix only
 
