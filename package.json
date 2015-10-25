@@ -1,0 +1,25 @@
+{
+  "name": "servers",
+  "version": "1.0.0",
+  "description": "A ~~service~~ server registry of sort.  *nix only",
+  "main": "client.js",
+  "bin": {
+    "servers": "servers"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "passport": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "request": "^2.65.0",
+    "sqlite3": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ivan Loh <ivan@eriad.com>",
+  "license": "ISC"
+}
