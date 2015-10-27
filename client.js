@@ -5,7 +5,7 @@ const lodash  = require('lodash');
 const request = require('request');
 
 
-module.exports = function (config) {
+module.exports = function (config, next) {
 
   config = lodash.defaults(config || {}, {
     port: 3000,
@@ -24,7 +24,7 @@ module.exports = function (config) {
     };
 
     request.post(param, function (err, response, body) {
-      console.log(body);
+      return next(body);
     });
   }
 
@@ -35,7 +35,7 @@ module.exports = function (config) {
     };
 
     request.get(param, function (err, response, body){
-      console.log(body);
+      return next(JSON.parse(body));
     });
   }
 
