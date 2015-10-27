@@ -1,8 +1,8 @@
 'use strict';
 
 
-const lodash  = require('lodash');
-const request = require('request');
+var lodash  = require('lodash');
+var request = require('request');
 
 
 module.exports = function (config) {
@@ -14,12 +14,12 @@ module.exports = function (config) {
     name: 'devServer'
   });
 
-  const setURL = config.host + ':' + config.port + '/server/update';
-  const getURL = config.host + ':' + config.port + '/list';
-  const auth   = {'bearer': config.key};
+  var setURL = config.host + ':' + config.port + '/server/update';
+  var getURL = config.host + ':' + config.port + '/list';
+  var auth   = {'bearer': config.key};
 
   function set(next) {
-    const param = {
+    var param = {
       'url': setURL,
       'form': {'name': config.name},
       'auth': auth
@@ -31,7 +31,7 @@ module.exports = function (config) {
   }
 
   function get(next) {
-    const param = {'url': getURL, 'auth': auth};
+    var param = {'url': getURL, 'auth': auth};
     request.get(param, function (err, response, body) {
       return next(err, JSON.parse(body));
     });

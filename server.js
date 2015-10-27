@@ -1,11 +1,11 @@
 'use strict';
 
 
-const http    = require('http');
-const lodash  = require('lodash');
-const sqlite3 = require('sqlite3').verbose();
-const express = require('express');
-const app     = express();
+var http    = require('http');
+var lodash  = require('lodash');
+var sqlite3 = require('sqlite3').verbose();
+var express = require('express');
+var app     = express();
 
 
 
@@ -16,9 +16,9 @@ module.exports = function (config, next) {
     key: '6d85a905'
   });
 
-  const stmt = 'CREATE TABLE IF NOT EXISTS ' +
-               'server(name TEXT PRIMAY KEY, ip TEXT, meta TEXT)';
-  const db   = new sqlite3.Database('./' + config.key + '.sqlite');
+  var stmt = 'CREATE TABLE IF NOT EXISTS ' +
+             'server(name TEXT PRIMAY KEY, ip TEXT, meta TEXT)';
+  var db   = new sqlite3.Database('./' + config.key + '.sqlite');
 
   db.run(stmt, function (err) {
 
@@ -34,7 +34,7 @@ module.exports = function (config, next) {
 
     var master = {
       clear: function clear(next) {
-        const stmt = 'DELETE FROM server';
+        var stmt = 'DELETE FROM server';
         db.run(stmt, next);
       }
     };

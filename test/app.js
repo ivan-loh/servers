@@ -1,19 +1,19 @@
 'use strict';
 
-const app    = require('../index');
-const should = require('should');
-const async  = require('async');
+var app    = require('../index');
+var should = require('should');
+var async  = require('async');
 
 describe('servers', function () {
 
-  const config = {port: 4444, key: 'testing'};
-  const client = app.client(config);
+  var config = {port: 4444, key: 'testing'};
+  var client = app.client(config);
 
 
   /**
    * Create a server
    */
-  let server;
+  var server;
   before(function (done) {
     async.series([
       function (next) {
@@ -67,7 +67,7 @@ describe('servers', function () {
    */
   after(function (done){
     var fs = require('fs');
-    fs.unlink('./testing.sqlite', done);
+        fs.unlink('./testing.sqlite', done);
   })
 
 });

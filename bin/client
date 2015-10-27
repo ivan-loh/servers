@@ -22,7 +22,7 @@ if (!program.port ||
   process.exit(1);
 }
 
-const config = {
+var config = {
   port: program.port,
    key: program.key,
   host: program.host,
