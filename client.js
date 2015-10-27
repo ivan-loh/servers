@@ -39,7 +39,3 @@ module.exports = function (config) {
 
   return {set: set, get: get};
 };
-
-if (require.main === module) {
-  module.exports();
-}

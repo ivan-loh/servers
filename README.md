@@ -30,6 +30,9 @@ servers-master --port 9999 --key test
 
 
 ### servers-client
+
+Submits a registry entry into the registry server or get the registry entry from the server
+
 | Options | Description                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------|
 | port    | port of the listening server                                                                           |
@@ -37,3 +40,8 @@ servers-master --port 9999 --key test
 | host    | host address of the server                                                                             |
 | name    | name of this client server, by default will try to obtain hostname of machine                          |
 | mode    | mode of this command - set will update the servers list - get will fetch the latest server list stored |
+
+```
+server-client --port 9999 --key test --host http://localhost --name devServer --mode set
+server-client --port 9999 --key test --host http://localhost --name devServer --mode get
+```
