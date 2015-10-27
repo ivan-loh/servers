@@ -1,6 +1,6 @@
 {
   "name": "servers",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A ~~service~~ server registry of sort.  *nix only",
   "main": "client.js",
   "bin": {
