@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+program.version('0.1.0')
+  .option('-p, --port [value]', 'listening port')
+  .option('-k, --key  [value]', 'authentication key to be used')
+  .parse(process.argv);
+
+
+console.log('this is the server');

@@ -4,7 +4,8 @@
   "description": "A ~~service~~ server registry of sort.  *nix only",
   "main": "client.js",
   "bin": {
-    "servers": "servers"
+    "servers-master": "server",
+    "servers-client": "client"
   },
   "dependencies": {
     "body-parser": "^1.14.1",

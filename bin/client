@@ -6,4 +6,5 @@ program.version('0.1.0')
   .option('-m, --mode     [value]', 'is this a client or server')
   .parse(process.argv);
 
-console.log(program.mode);
+
+console.log('this is the client');
