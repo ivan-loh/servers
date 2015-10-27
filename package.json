@@ -1,11 +1,11 @@
 {
   "name": "servers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A ~~service~~ server registry of sort.  *nix only",
   "main": "client.js",
   "bin": {
-    "servers-master": "server",
-    "servers-client": "client"
+    "servers-master": "bin/server",
+    "servers-client": "bin/client"
   },
   "dependencies": {
     "body-parser": "^1.14.1",
