@@ -12,7 +12,7 @@ module.exports = function (config) {
   config = lodash.defaults(config || {}, {
     port: 3000,
     key: '6d85a905',
-    dbPath: './ringleader.sqlite'
+    dbPath: './servers.sqlite'
   });
 
   require('./lib/middlewares')(app, config);
