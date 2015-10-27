@@ -1,6 +1,10 @@
 # Servers
 A ~~service~~ server registry of sort. 
-*nix only
+
+[![NPM](https://nodei.co/npm/servers.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/servers/)
+
+[![Build Status](https://travis-ci.org/ivan-loh/servers.svg?branch=master)](https://travis-ci.org/ivan-loh/servers) [![Dependencies Status](https://david-dm.org/ivan-loh/servers.svg)](https://david-dm.org/ivan-loh/servers)
+
 
 
 ```
