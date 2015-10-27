@@ -1,6 +1,8 @@
 #!/usr/bin/env node
+'use strict';
 
 var program = require('commander');
+var server  = require('../index').server;
 
 program.version('0.1.0')
   .option('-p, --port [value]', 'listening port')
@@ -8,4 +10,15 @@ program.version('0.1.0')
   .parse(process.argv);
 
 
-console.log('this is the server');
+if (!program.port || !program.key) {
+  console.log('incomplete parameters, use --help');
+  process.exit(1);
+}
+
+const config = {
+  port: program.port, key: program.key
+};
+
+server(config, function () {
+  console.log('Started');
+});

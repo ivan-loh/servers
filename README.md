@@ -6,20 +6,30 @@ A ~~service~~ server registry of sort.
 [![Build Status](https://travis-ci.org/ivan-loh/servers.svg?branch=master)](https://travis-ci.org/ivan-loh/servers) [![Dependencies Status](https://david-dm.org/ivan-loh/servers.svg)](https://david-dm.org/ivan-loh/servers)
 
 
+Install
+-------
 
-```
-curl -H "Authorization: Bearer 6d85a905"  http://localhost:3000/list/
+```js
+npm install -g servers
 ```
 
-### Options - Server
+Usage
+-----
+
+### servers-master
+Starts a registry server to store request from other clients and to inform others on the location of other servers
 
 | Options | Description                            |
 |---------|----------------------------------------|
 | port    | port the server listens to for request |
 | key     | Authentication key to use              |
 
+```
+servers-master --port 9999 --key test
+```
 
-## Options - Client
+
+### servers-client
 | Options | Description                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------|
 | port    | port of the listening server                                                                           |
