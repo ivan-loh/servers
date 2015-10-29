@@ -48,8 +48,17 @@ describe('servers', function () {
       },
 
       function (next) {
+        client.set(next);
+      },
+
+      function (next) {
+        client.set(next);
+      },
+
+      function (next) {
         client.get(function (err, results){
           if (err) { return next(err); }
+          results.should.have.length(1);
           results.should.not.be.empty();
           next();
         });
