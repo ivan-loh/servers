@@ -45,3 +45,28 @@ Submits a registry entry into the registry server or get the registry entry from
 server-client --port 9999 --key test --host http://localhost --name devServer --mode set
 server-client --port 9999 --key test --host http://localhost --name devServer --mode get
 ```
+
+
+### as a module example
+a usage example of using the client as a script
+```js
+'use strict';
+
+const client = require('servers').client;
+const config = {
+  port: 44444,
+   key: 'supersekretkey',
+  host: 'http://my.registry.com',
+  name: 'dev.ivan'
+};
+
+client(config).get(function (err, result){
+  
+  if (err) { return console.error(err); }
+
+  result.forEach(function (e){                                                                             
+    console.log(new Date(parseInt(e.meta, 10)), e.ip, e.name);                                             
+  });
+
+});
+```
