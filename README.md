@@ -48,25 +48,8 @@ server-client --port 9999 --key test --host http://localhost --name devServer --
 
 
 ### as a module example
-a usage example of using the client as a script
-```js
-'use strict';
 
-const client = require('servers').client;
-const config = {
-  port: 44444,
-   key: 'supersekretkey',
-  host: 'http://my.registry.com',
-  name: 'dev.ivan'
-};
+a [sample script](https://gist.github.com/ivan-loh/5589abb80ba36c8a5b68) that i am using and a sample outcome:
+![Sample of lsserver output](https://gist.githubusercontent.com/ivan-loh/5589abb80ba36c8a5b68/raw/b19fdeb7148c8d432b6620e204e52dfc3949ce91/lsservers-sample.png)
 
-client(config).get(function (err, result){
-  
-  if (err) { return console.error(err); }
 
-  result.forEach(function (e){                                                                             
-    console.log(new Date(parseInt(e.meta, 10)), e.ip, e.name);                                             
-  });
-
-});
-```
