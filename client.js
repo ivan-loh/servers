@@ -21,7 +21,7 @@ module.exports = function (config) {
   function set(next) {
     var param = {
       'url': setURL,
-      'form': {'name': config.name},
+      'form': {'name': config.name, 'meta': new Date().getTime() },
       'auth': auth
     };
 
