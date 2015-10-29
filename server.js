@@ -17,7 +17,7 @@ module.exports = function (config, next) {
   });
 
   var stmt = 'CREATE TABLE IF NOT EXISTS ' +
-             'server(name TEXT PRIMAY KEY, ip TEXT, meta TEXT)';
+             'server(name TEXT PRIMARY KEY, ip TEXT, meta TEXT)';
   var db   = new sqlite3.Database('./' + config.key + '.sqlite');
 
   db.run(stmt, function (err) {
